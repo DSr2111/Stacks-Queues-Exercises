@@ -3,11 +3,25 @@ class Stack {
     this.items = [];
   }
 
-  push(el) {}
+  push(el) {
+    this.items.push(el);
+  }
 
-  pop() {}
+  pop() {
+    if (this.isEmpty()) {
+      return "Stack is empty";
+    }
+    return this.items.pop();
+  }
 
-  peek() {}
+  peek() {
+    if (this.isEmpty()) {
+      return "Stack is empty";
+    }
+    return this.items[this.items.length - 1];
+  }
 
-  isEmpty() {}
+  isEmpty() {
+    return this.items.length === 0;
+  }
 }
