@@ -7,6 +7,9 @@ class Queue {
   }
 
   dequeue(el) {
+    if (this.isEmpty) {
+      throw new Error("Queue is empty");
+    }
     this.items.shift(el);
   }
 
