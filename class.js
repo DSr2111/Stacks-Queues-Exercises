@@ -2,11 +2,20 @@ class Queue {
   constructor() {
     this.items = [];
   }
-  enqueue(el) {}
+  enqueue(el) {
+    this.items.push(el);
+  }
 
-  dequeue(el) {}
+  dequeue(el) {
+    this.items.shift(el);
+  }
 
-  peek() {}
+  peek() {
+    if (this.isEmpty()) {
+      return "Queue is empty";
+    }
+    return this.items[0];
+  }
 
   isEmpty() {}
 }
