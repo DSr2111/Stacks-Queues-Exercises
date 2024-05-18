@@ -18,10 +18,6 @@ class Queue {
   }
 
   isEmpty() {
-    if (this.items.length === 0) {
-      return "Yes";
-    } else {
-      return "No";
-    }
+    return this.items.length === 0;
   }
 }
